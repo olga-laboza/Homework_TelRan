@@ -1,18 +1,25 @@
-package string;
+package homewor_4;
 
-import java.util.Locale;
+import java.util.Scanner;
+
+//        Введите 2 слова с клавиатуры (используя объект класса Scanner), состоящие из четного количества букв.
+//        Выведите в консоль слово, состоящее из первой половины первого слова и второй половины второго слова.
 
 public class Main {
     public static void main(String[] args) {
 
-        String str = new String("\tI study Basic Java");
-        System.out.println(str);
-        System.out.println("Last character of the string: " + str.charAt(18));
-        System.out.println("This string contain Java: " + str.contains("Java"));
-        System.out.println("Change letters: " + str.replace('a', 'o'));
-        System.out.println(str.toUpperCase(Locale.ROOT));
-        System.out.println(str.toLowerCase(Locale.ROOT));
-        System.out.println(str.substring(15, 19));
+        Scanner scannerIn = new Scanner(System.in);
+
+        System.out.println("Введите первое слово с четным количеством букв: ");
+        String firstWord = scannerIn.next();
+        String firstPart = firstWord.substring(0, firstWord.length() / 2);
+
+        System.out.println("Введите втрое слово с четным количеством букв: ");
+        String secondWord = scannerIn.next();
+        String secondPart = secondWord.substring(secondWord.length() / 2);
+
+        System.out.println("Новое слово: " + firstPart + secondPart);
+
 
     }
 }
